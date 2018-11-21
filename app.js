@@ -20,6 +20,6 @@ app.get('/', function(req, res) {
 });
 
 app.listen(app.get(PORT), function(){
-    console.log(Express started on http://localhost: '+
+    console.log('Express started on http://localhost: '+
     app.get('PORT') + '; press Ctrl-c to terminate. ');
 });
