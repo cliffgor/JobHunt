@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
 
 app.get('/', function (req, res) {
-    res.render("index", {title:"Jobby"});
+    res.render("index", {title:"JobHunt"});
 });
 
 app.get('/search', function (req, res) {
@@ -26,14 +26,14 @@ app.get('/search', function (req, res) {
         params: queries
     })
     .then(function(response){
-        res.render("search", { title: "Jobby", jobs: response.data});
+        res.render("search", { title: "JobHunt", jobs: response.data});
     })
     .catch(function(error) {
         console.log(error);
     });
     }
     else {
-        res.render("search", {title: "Jobby"})
+        res.render("search", {title: "JobHunt"})
     }
 });
 
