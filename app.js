@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 5000;
 const path = require('path');
 
 const handlebars = require('express-handlebars');
+const expressip = require('express-ip');
+app.use(expressip().getIpInfoMiddleware); // registering the middleware
+
 
 app.engine('.hbs', handlebars({ extname: '.hbs' }));
 
